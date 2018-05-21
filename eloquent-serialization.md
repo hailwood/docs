@@ -171,6 +171,8 @@ You may customize the serialization format of individual Eloquent date attribute
 
 #### Global Customization Via Carbon
 
+> {note} This does not affect Eloquent models converted to JSON via `->toJson()`.
+
 Laravel extends the [Carbon](https://github.com/briannesbitt/Carbon) date library in order to provide convenient customization of Carbon's JSON serialization format. To customize how all Carbon dates throughout your application are serialized, use the `Carbon::serializeUsing` method. The `serializeUsing` method accepts a Closure which returns a string representation of the date for JSON serialization:
 
     <?php
